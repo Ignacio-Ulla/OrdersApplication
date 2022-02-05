@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="OrderItems"
+  Version="11.1.1.56.60"
+  DBObjectType="table"
+  DBObjectName="ORDER_ITEMS"
+  AliasName="OrderItems"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="OrderId"
+    IsNotNull="true"
+    Precision="15"
+    Scale="0"
+    ColumnName="ORDER_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ORDER_ITEMS"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LineItemId"
+    IsNotNull="true"
+    Precision="15"
+    Scale="0"
+    ColumnName="LINE_ITEM_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ORDER_ITEMS"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ProductId"
+    IsNotNull="true"
+    Precision="15"
+    Scale="0"
+    ColumnName="PRODUCT_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ORDER_ITEMS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Quantity"
+    IsNotNull="true"
+    Precision="6"
+    Scale="0"
+    ColumnName="QUANTITY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ORDER_ITEMS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UnitPrice"
+    IsNotNull="true"
+    Precision="8"
+    Scale="2"
+    ColumnName="UNIT_PRICE"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ORDER_ITEMS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedBy"
+    IsNotNull="true"
+    Precision="60"
+    ColumnName="CREATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ORDER_ITEMS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreationDate"
+    IsNotNull="true"
+    ColumnName="CREATION_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="ORDER_ITEMS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdatedBy"
+    IsNotNull="true"
+    Precision="60"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ORDER_ITEMS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateDate"
+    IsNotNull="true"
+    ColumnName="LAST_UPDATE_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="ORDER_ITEMS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ObjectVersionId"
+    IsNotNull="true"
+    Precision="15"
+    Scale="0"
+    ColumnName="OBJECT_VERSION_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ORDER_ITEMS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Orders"
+    Association="model.OrderItemsOrdersFkAssoc"
+    AssociationEnd="model.OrderItemsOrdersFkAssoc.Orders"
+    AssociationOtherEnd="model.OrderItemsOrdersFkAssoc.OrderItems"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="OrderItemsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="ORDER_ITEMS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.OrderId"/>
+      <Item Value="model.OrderItems.LineItemId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007775">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007775"/>
+      <Attr Name="_checkCondition" Value='"ORDER_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.OrderId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007776">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007776"/>
+      <Attr Name="_checkCondition" Value='"LINE_ITEM_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.LineItemId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007777">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007777"/>
+      <Attr Name="_checkCondition" Value='"PRODUCT_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.ProductId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007778">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007778"/>
+      <Attr Name="_checkCondition" Value='"QUANTITY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.Quantity"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007779">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007779"/>
+      <Attr Name="_checkCondition" Value='"UNIT_PRICE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.UnitPrice"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007780">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007780"/>
+      <Attr Name="_checkCondition" Value='"CREATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.CreatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007781">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007781"/>
+      <Attr Name="_checkCondition" Value='"CREATION_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.CreationDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007782">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007782"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.LastUpdatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007783">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007783"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATE_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.LastUpdateDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007784">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007784"/>
+      <Attr Name="_checkCondition" Value='"OBJECT_VERSION_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.ObjectVersionId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="OrderItemsOrdersFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="ORDERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ORDER_ITEMS_ORDERS_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.OrderId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="OrderItemsProductsFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRODUCTS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ORDER_ITEMS_PRODUCTS_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.OrderItems.ProductId"/>
+    </AttrArray>
+  </Key>
+</Entity>
